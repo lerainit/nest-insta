@@ -50,6 +50,11 @@ constructor(@InjectModel(User.name) private userModel:Model<UserDocument>) {}
 
         return updatedUser;
     }
+async  authUser(user: User)
+    {
+        const updatedUser = this.userModel.findOneAndUpdate({id:user.id},user);
 
+        return updatedUser;
+    }
 
 }

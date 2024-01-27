@@ -43,7 +43,7 @@ export class PostService{
     }
     async  updatePost(postDto: UpdatePostDto)
     {
-        const updatedPost = this.postModel.findOneAndUpdate({url:postDto.url},postDto);
+        const updatedPost = this.postModel.findOneAndUpdate({id:postDto.id},postDto);
 
         return updatedPost;
     }

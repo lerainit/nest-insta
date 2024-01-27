@@ -2,6 +2,7 @@ import {User} from "../schema/user.schema";
 import {Comment} from "../schema/coment.schema";
 
 export class UpdatePostDto{
+   id:Number
 
     user: User
 
