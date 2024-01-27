@@ -19,15 +19,15 @@ export class AuthService {
         const tokenAccess = await this.jwtService.signAsync(payload,{expiresIn:"30m"})
         user.isAuth = true
         this.userService.authUser(user);
-        console.log('ppppp')
+
 
         return {token: tokenAccess}
     }
 
      async  logout(user:User)
         {
-console.log('ppppppp')
-console.log(user)
+
+
            user.isAuth = false
                    this.userService.authUser(user);
 
